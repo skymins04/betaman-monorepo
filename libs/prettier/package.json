@@ -1,0 +1,11 @@
+{
+  "name": "@betaman/prettier",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "files": [
+    "base.json"
+  ]
+}

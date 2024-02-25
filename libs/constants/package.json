@@ -1,0 +1,9 @@
+{
+  "name": "@betaman/constants",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@betaman/tsconfig": "workspace:^",
+    "@types/node": "^20"
+  }
+}
