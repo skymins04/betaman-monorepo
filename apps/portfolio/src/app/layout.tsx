@@ -2,6 +2,9 @@ import "../common/styles/global.css";
 import "@betaman/shadcn/theme-base.css";
 
 import type { Metadata } from "next";
+import { clsx } from "clsx/lite";
+import { ThemeProvider } from "@betaman/tailwind";
+import { fontNotoSansKR } from "@betaman/font/next";
 
 export const metadata: Metadata = {
   title: "BETAMAN의 대시보드",
@@ -10,8 +13,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html
+      lang="ko"
+      className={clsx(
+        " bg-background text-foreground",
+        fontNotoSansKR.className,
+        fontNotoSansKR.variable,
+      )}
+      suppressHydrationWarning
+    >
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
